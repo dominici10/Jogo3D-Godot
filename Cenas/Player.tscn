@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Bulbasaur.glb" type="PackedScene" id=1]
+[ext_resource path="res://Script/Player.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.831036
+height = 0.978317
+
+[node name="KinematicBody" type="KinematicBody"]
+script = ExtResource( 2 )
+
+[node name="Bulbasaur" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.999998, -0.00200713, 0, 0.00200713, 0.999998, 0, 0.581776, 0.175145 )
+shape = SubResource( 1 )
+
+[node name="CameraMov" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.17483, 0 )
+
+[node name="Camera" type="Camera" parent="CameraMov"]
+transform = Transform( 1, 0, 0, 0, -0.063348, 0.997992, 0, -0.997992, -0.063348, 0, 6.17672, 0 )
+
+[editable path="Bulbasaur"]

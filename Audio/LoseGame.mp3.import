@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LoseGame.mp3-5d2749ba39fbafb6579da952bbb15905.mp3str"
+
+[deps]
+
+source_file="res://Audio/LoseGame.mp3"
+dest_files=[ "res://.import/LoseGame.mp3-5d2749ba39fbafb6579da952bbb15905.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

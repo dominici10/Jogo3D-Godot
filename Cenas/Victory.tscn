@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Font/Redkost.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cenas/Sair.gd" type="Script" id=2]
+[ext_resource path="res://Audio/Victory.mp3" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Victory" type="Control"]
+margin_right = 1381.0
+margin_bottom = 776.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1375.0
+margin_bottom = 770.0
+color = Color( 0.866667, 0.831373, 0.831373, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 317.0
+margin_top = 267.0
+margin_right = 1083.0
+margin_bottom = 476.0
+custom_colors/font_color = Color( 0.603922, 0.572549, 0.972549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "VITORIA"
+uppercase = true
+
+[node name="Sair" type="Button" parent="."]
+margin_left = 637.0
+margin_top = 529.0
+margin_right = 778.0
+margin_bottom = 599.0
+custom_colors/font_color = Color( 0.603922, 0.572549, 0.972549, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "SAIR"
+flat = true
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="Sair" to="Sair" method="_on_Sair_pressed"]
